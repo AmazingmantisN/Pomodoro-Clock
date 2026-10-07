@@ -8,13 +8,13 @@ import sys
 
 
 def resource_path(relative_path):
-    """Gets absolute path to resource, works for dev and for PyInstaller."""
+    
     if hasattr(sys, "_MEIPASS"):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
 
-# --- REPLACE LINE 13 WITH THIS ---
+
 bg_path = resource_path("Pomodorobgpic.png")
 # ---------------------------- CONSTANTS ------------------------------- #
 from constants import *
@@ -56,7 +56,7 @@ canvas.create_text(
 start_button = Button(
     window,
     text="Start",
-    width=7,  # Fixed width forces both buttons to match size
+    width=7,  
     font=(FONT_NAME, 12, "bold"),
     fg="#F7F5DD",
     bg="#5D3140",
@@ -73,7 +73,7 @@ start_button.place(x=30, y=210)
 stop_button = Button(
     window,
     text="Reset",
-    width=7,  # Fixed width matches Start button exactly
+    width=7,  
     font=(FONT_NAME, 12, "bold"),
     fg="#F7F5DD",
     bg="#5D3140",
@@ -90,7 +90,7 @@ stop_button.place(x=210, y=210)
 
 
 
-#Break selector buttons
+
 short_break_btn = Button(
     window,
     text="Short Break",
